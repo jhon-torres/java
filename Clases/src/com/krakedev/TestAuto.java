@@ -19,14 +19,20 @@ public class TestAuto {
 		
 		// Mostrar los valorres de los atributos 
 		System.out.println("-------Auto 1---------");
-		System.out.println("Marca: "+auto1.marca);
-		System.out.println("Año: "+auto1.anio);
-		System.out.println("Precio: "+auto1.precio);
+		auto1.mostrarAtributos(); // mediante metodo
+		/*
+		 * System.out.println("Marca: "+auto1.marca);
+		 * System.out.println("Año: "+auto1.anio);
+		 * System.out.println("Precio: "+auto1.precio);
+		 */
 		
 		System.out.println("-------Auto 2---------");
-		System.out.println("Marca: "+auto2.marca);
-		System.out.println("Año: "+auto2.anio);
-		System.out.println("Precio: "+auto2.precio);
+		auto2.mostrarAtributos();
+		/*
+		* System.out.println("Marca: "+auto2.marca);
+		* System.out.println("Año: "+auto2.anio);
+		* System.out.println("Precio: "+auto2.precio);
+		*/
 
 	}
 

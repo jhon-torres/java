@@ -9,13 +9,13 @@ public class TestAuto {
 		
 		// Modificar los valores de los atributos de cada auto
 		// Auto 1
-		auto1.marca = "Mercedes";
-		auto1.anio = 2014;
-		auto1.precio = 49999.00;
+		auto1.setMarca("Mercedes");
+		auto1.setAnio(2014);
+		auto1.setPrecio(49999.00);
 		// Auto 2
-		auto2.marca = "Toyota";
-		auto2.anio = 2017;
-		auto2.precio = 34999.00;
+		auto2.setMarca("Toyota");
+		auto2.setAnio(2017);
+		auto2.setPrecio(34999.00);
 		
 		// Mostrar los valorres de los atributos 
 		System.out.println("-------Auto 1---------");

@@ -8,30 +8,30 @@ public class TestCuadrado {
 		Cuadrado c2 = new Cuadrado();
 		Cuadrado c3 = new Cuadrado();
 		
-		double areaRectangulo;
-		double perimetroRectangulo;
+		double areaCuadrado;
+		double perimetroCuadrado;
 		
 		// modificar valores 
-		c1.lado = 3;
-		c2.lado = 4;
-		c3.lado = 2;
+		c1.setLado(3);
+		c2.setLado(4);
+		c3.setLado(2);
 		
-		areaRectangulo = c1.calcularArea();
-		System.out.println("Área c1: "+areaRectangulo);
-		perimetroRectangulo= c1.calcularPerimetro();
-		System.out.println("Perímetro c1: "+perimetroRectangulo);
-		
-		System.out.println("---------------------");
-		areaRectangulo = c2.calcularArea();
-		System.out.println("Área c2: "+areaRectangulo);
-		perimetroRectangulo= c2.calcularPerimetro();
-		System.out.println("Perímetro c2: "+perimetroRectangulo);
+		areaCuadrado = c1.calcularArea();
+		System.out.println("Área c1: "+areaCuadrado);
+		perimetroCuadrado= c1.calcularPerimetro();
+		System.out.println("Perímetro c1: "+perimetroCuadrado);
 		
 		System.out.println("---------------------");
-		areaRectangulo = c3.calcularArea();
-		System.out.println("Área c3: "+areaRectangulo);
-		perimetroRectangulo= c3.calcularPerimetro();
-		System.out.println("Perímetro c3: "+perimetroRectangulo);
+		areaCuadrado = c2.calcularArea();
+		System.out.println("Área c2: "+areaCuadrado);
+		perimetroCuadrado= c2.calcularPerimetro();
+		System.out.println("Perímetro c2: "+perimetroCuadrado);
+		
+		System.out.println("---------------------");
+		areaCuadrado = c3.calcularArea();
+		System.out.println("Área c3: "+areaCuadrado);
+		perimetroCuadrado= c3.calcularPerimetro();
+		System.out.println("Perímetro c3: "+perimetroCuadrado);
 
 	}
 

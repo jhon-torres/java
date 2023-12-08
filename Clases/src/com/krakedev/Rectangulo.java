@@ -3,7 +3,11 @@ package com.krakedev;
 public class Rectangulo {
 	private int base;
 	private int altura;
-	
+
+	public Rectangulo(int base, int altura) {
+		this.base = base;
+		this.altura = altura;
+	}
 
 	public int getBase() {
 		return base;
@@ -24,8 +28,8 @@ public class Rectangulo {
 	public int calcularArea() {
 		return base * altura;
 	}
-	
-	public double calcularPerimetro () {
+
+	public double calcularPerimetro() {
 		return (base * 2) + (altura * 2);
 	}
 }

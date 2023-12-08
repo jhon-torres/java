@@ -8,6 +8,7 @@ public class TestPersona {
 		p = new Persona(); // 2. instanciar el objeto persona, referenciarlo con p
 
 		Persona p2 = new Persona();
+		Persona p3 = new Persona("Kathe", 27, 1.65);
 
 		// 3. acceder a los atributos
 		System.out.println("nombre: " + p.getNombre());
@@ -28,6 +29,7 @@ public class TestPersona {
 		System.out.println("*****************");
 		System.out.println("p.nombre: " + p.getNombre());
 		System.out.println("p2.nombre: " + p2.getNombre());
+		System.out.println("p3.nombre: " + p3.getNombre());
 
 	}
 

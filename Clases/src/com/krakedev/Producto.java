@@ -5,52 +5,51 @@ public class Producto {
 	private String descripcion;
 	private double precio;
 	private int stockActual;
-	
+
+	public Producto(String nombre, String descripcion, double precio, int stockActual) {
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.precio = precio;
+		this.stockActual = stockActual;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
-
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-
 	public String getDescripcion() {
 		return descripcion;
 	}
-
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 
-
 	public double getPrecio() {
 		return precio;
 	}
-
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 
-
 	public int getStockActual() {
 		return stockActual;
 	}
-
 
 	public void setStockActual(int stockActual) {
 		this.stockActual = stockActual;
 	}
 
-
 	// metodo de la clase Productos
 	public void mostrarAtributosP() {
-		System.out.println("Nombre: "+ this.nombre);
-		System.out.println("Descripción: "+ this.descripcion);
-		System.out.println("Precio: "+ this.precio);
-		System.out.println("Stock: "+ this.stockActual);
+		System.out.println("Nombre: " + this.nombre);
+		System.out.println("Descripción: " + this.descripcion);
+		System.out.println("Precio: " + this.precio);
+		System.out.println("Stock: " + this.stockActual);
 	}
 }

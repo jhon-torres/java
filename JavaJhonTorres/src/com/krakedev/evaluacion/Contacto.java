@@ -7,18 +7,18 @@ public class Contacto {
 	private Direccion direccion;
 	private ArrayList<Telefono> telefonos;
 
+	public Contacto(String cedula, String nombre, String apellido) {
+		this.cedula = cedula;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.telefonos = new ArrayList<Telefono>();
+	}
+
 	public Contacto(String cedula, String nombre, String apellido, Direccion direccion) {
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
-		this.telefonos = new ArrayList<Telefono>();
-	}
-	
-	public Contacto(String cedula, String nombre, String apellido) {
-		this.cedula = cedula;
-		this.nombre = nombre;
-		this.apellido = apellido;
 		this.telefonos = new ArrayList<Telefono>();
 	}
 
@@ -64,45 +64,46 @@ public class Contacto {
 
 	public void imprimir() {
 		// IMPRIMIR 1
-		/*
-		 * System.out.println("Información del Contacto:");
-		 * System.out.println("Cédula: "+cedula); System.out.println("Nombre: "+nombre);
-		 * System.out.println("Apellido: "+apellido); System.out.println("Dirección:");
-		 * if (direccion != null) {
-		 * System.out.println("   Calle Principal: "+direccion.getCallePrincipal());
-		 * System.out.println("   Calle Secundaria: "+direccion.getCalleSecundaria()); }
-		 */
-		
-		// IMPRIMIR 2
-		System.out.println("***"+nombre+" "+apellido+"****");
+		System.out.println("Información del Contacto");
+		System.out.println("Cédula: " + cedula);
+		System.out.println("Nombre: " + nombre + " " + apellido);
+		// System.out.println("Apellido: " + apellido);
+		System.out.println("Dirección:");
 		if (direccion != null) {
-			System.out.println("Dirección: "+direccion.getCallePrincipal()+" y "+direccion.getCalleSecundaria());			
-		} else {
-			System.out.println("No tiene asociada una dirección");
+			System.out.println("   Calle Principal: " + direccion.getCallePrincipal());
+			System.out.println("   Calle Secundaria: " + direccion.getCalleSecundaria());
 		}
+
+		// IMPRIMIR 2
+		/*
+		 * System.out.println("***" + nombre + " " + apellido + "****"); if (direccion
+		 * != null) { System.out.println("Dirección: " + direccion.getCallePrincipal() +
+		 * " y " + direccion.getCalleSecundaria()); } else {
+		 * System.out.println("No tiene asociada una dirección"); }
+		 */
 	}
-	
+
 	public void agregarTelefono(Telefono telefono) {
 		telefonos.add(telefono);
 	}
-	
-	public void mostrarTelefonos () {
+
+	public void mostrarTelefonos() {
 		System.out.println("Teléfonos con estado 'C'");
 		for (Telefono tlf : telefonos) {
 			if (tlf.getEstado().equals("C")) {
-				System.out.println("Número: "+tlf.getNumero()+", Tipo: "+tlf.getTipo());
+				System.out.println("Número: " + tlf.getNumero() + ", Tipo: " + tlf.getTipo());
 			}
 		}
 	}
-	
-	public ArrayList<Telefono> recuperarIncorrectos (){
+
+	public ArrayList<Telefono> recuperarIncorrectos() {
 		ArrayList<Telefono> array = new ArrayList<Telefono>();
 		for (Telefono tlf : telefonos) {
 			if (tlf.getEstado().equals("E")) {
 				array.add(tlf);
 			}
 		}
-		
+
 		return array;
 	}
 }

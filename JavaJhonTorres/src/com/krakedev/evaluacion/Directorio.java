@@ -52,8 +52,8 @@ public class Directorio {
 
 	public boolean agregarContacto(Contacto contacto) {
 		boolean cont = false;
-		Contacto finded = buscarPorCedula(contacto.getCedula());
-		if (contacto != null && finded == null) {
+		Contacto found = buscarPorCedula(contacto.getCedula());
+		if (contacto != null && found == null) {
 			contactos.add(contacto);
 			fechaModificacion = new Date();
 			cont = true;
@@ -76,7 +76,7 @@ public class Directorio {
 	public String consultarUltimaModificacion() {
 		String fecha = null;
 
-		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		fecha = formato.format(fechaModificacion);
 
 		return fecha;
